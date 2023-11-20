@@ -6,6 +6,6 @@
                 "I want to be able to look up the meaning of unusual and impressive words"},
         cardNumber = "#123"
 )
-package org.example.features.search;
+package org.example.features.searchToAdd;
 
 import net.thucydides.core.annotations.Narrative;
