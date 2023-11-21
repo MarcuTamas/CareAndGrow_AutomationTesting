@@ -1,5 +1,6 @@
 package org.example.features.WelcomToInitialize;
 
+
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.Managed;

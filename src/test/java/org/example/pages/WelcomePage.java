@@ -1,12 +1,10 @@
 package org.example.pages;
 
+
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @DefaultUrl("https://marcutamas.github.io/CareAndGrow/welcome")
 public class WelcomePage extends PageObject {

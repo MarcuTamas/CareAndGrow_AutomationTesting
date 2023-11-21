@@ -1,12 +1,11 @@
 package org.example.steps.serenity;
 
-import org.example.pages.DictionaryPage;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.steps.ScenarioSteps;
+import org.example.pages.DictionaryPage;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.hasItem;
+import static org.junit.Assert.assertThat;
 
 public class EndUserSteps {
 
