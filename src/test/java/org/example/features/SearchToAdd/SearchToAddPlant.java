@@ -1,4 +1,4 @@
-package org.example.features.searchToAdd;
+package org.example.features.SearchToAdd;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Issue;

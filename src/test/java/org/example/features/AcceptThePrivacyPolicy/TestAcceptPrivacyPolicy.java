@@ -1,4 +1,4 @@
-package org.example.features.WelcomToInitialize;
+package org.example.features.AcceptThePrivacyPolicy;
 
 
 import net.serenitybdd.junit.runners.SerenityRunner;
@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class AcceptPrivacyPollicy_and_InitilizeWithMockObjects {
+public class TestAcceptPrivacyPolicy {
     @Managed(uniqueSession = false, driver = "firefox")
     public WebDriver webdriver;
 
