@@ -13,8 +13,15 @@ public class WelcomePage extends PageObject {
     @FindBy(id = "AcceptPrivacyButton")
     private WebElementFacade acceptPrivacyPolicyButton;
 
+    @FindBy(tagName = "h3")
+    private WebElementFacade welcomeMessage;
+
 /**** Actions on WebElements ****/
     public void click_acceptPrivacyPolicyButton() {
         this.acceptPrivacyPolicyButton.click();
+    }
+
+    public String get_welcomeMessage() {
+        return this.welcomeMessage.getText();
     }
 }

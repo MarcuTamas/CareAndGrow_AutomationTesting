@@ -3,28 +3,29 @@ package org.example.steps.serenity;
 
 
 import net.thucydides.core.annotations.Step;
-import org.example.pages.NavBar.ComponentSubMenu.MyPlantsSubMenuPage;
-import org.example.pages.NavBar.ComponentSubMenu.PlantsCareSubMenuPage;
-import org.example.pages.NavBar.ComponentSubMenu.TransactionsSubMenuPage;
+import org.example.pages.NavBar.ComponentSubMenu.MyPlantsNavBarSubMenuPage;
+import org.example.pages.NavBar.ComponentSubMenu.PlantsCareNavBarSubMenuPage;
+import org.example.pages.NavBar.ComponentSubMenu.TransactionsNavBarSubMenuPage;
 import org.example.pages.NavBar.NavBarElementPage;
 import org.example.pages.WelcomePage;
+import org.junit.Assert;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class EndUserWelcomeSteps {
 
 /**** Pages ****/
     WelcomePage welcomePage;
     NavBarElementPage navBarElementPage;
-    MyPlantsSubMenuPage myPlantsSubMenuPage;
-    PlantsCareSubMenuPage plantsCareSubMenuPage;
-    TransactionsSubMenuPage transactionsSubMenuPage;
+    MyPlantsNavBarSubMenuPage myPlantsNavBarSubMenuPage;
+    PlantsCareNavBarSubMenuPage plantsCareNavBarSubMenuPage;
+    TransactionsNavBarSubMenuPage transactionsNavBarSubMenuPage;
 
 /**** Scenario steps ****/
-    //Accept the privacy policy and check the localStorage
+    //Accept the privacy policy and check the localStorage | ACT & ASSERT
     @Step
     public void acceptPrivacy_and_checkTheLocalStorage(String expectedInitialElementNumberInLocalStorage) {
-        goto_home_page();
+        goto_home_page(); //Act and Assert are made in this method
         accept_privacy_policy();
         checkTheEntireInitialLocalStorage(expectedInitialElementNumberInLocalStorage);
     }
@@ -45,13 +46,13 @@ public class EndUserWelcomeSteps {
     @Step
     public void goto_home_page() {
         this.welcomePage.open();
+        assertEquals(this.welcomePage.get_welcomeMessage(), ("Welcome plant lover")); //Assert
     }
 
     @Step
     public void accept_privacy_policy() {
         this.welcomePage.click_acceptPrivacyPolicyButton();
     }
-
 
 
     //Click the NavBar main buttons
@@ -75,17 +76,17 @@ public class EndUserWelcomeSteps {
     //Get the values from the localStorage
     @Step
     public String get_plantsInLocalStorageNumber() {
-        return this.myPlantsSubMenuPage.get_plantsInLocalStorageNumber();
+        return this.myPlantsNavBarSubMenuPage.get_plantsInLocalStorageNumber();
     }
 
     @Step
     public String get_plantCareInLocalStorageNumber() {
-        return this.plantsCareSubMenuPage.get_plantCareInLocalStorageNumber();
+        return this.plantsCareNavBarSubMenuPage.get_plantCareInLocalStorageNumber();
     }
 
     @Step
     public String get_transactionsInLocalStorageNumber() {
-        return this.transactionsSubMenuPage.get_transactionsInLocalStorageNumber();
+        return this.transactionsNavBarSubMenuPage.get_transactionsInLocalStorageNumber();
     }
 
 

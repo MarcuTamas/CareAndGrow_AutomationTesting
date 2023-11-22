@@ -4,7 +4,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 
-public class TransactionsSubMenuPage extends PageObject {
+public class TransactionsNavBarSubMenuPage extends PageObject {
 /**** WebElements ****/
     @FindBy(id = "TransactionsInLocalStorageNumber")
     private WebElementFacade transactionsInLocalStorageNumber;
@@ -15,5 +15,9 @@ public class TransactionsSubMenuPage extends PageObject {
 /**** Actions on WebElements ****/
     public String get_transactionsInLocalStorageNumber() {
         return this.transactionsInLocalStorageNumber.getText();
+    }
+
+    public void click_deleteTransactionButton() {
+        this.deleteTransactionButton.click();
     }
 }

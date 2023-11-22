@@ -9,6 +9,6 @@
         },
         cardNumber = "#123"
 )
-package org.example.features.AcceptThePrivacyPolicy;
+package org.example.features.DeleteTransaction;
 
 import net.thucydides.core.annotations.Narrative;

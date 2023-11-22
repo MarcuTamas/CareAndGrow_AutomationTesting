@@ -9,6 +9,6 @@
         },
         cardNumber = "#123"
 )
-package org.example.features.AcceptThePrivacyPolicy;
+package org.example.features.AddPlantCare;
 
 import net.thucydides.core.annotations.Narrative;
