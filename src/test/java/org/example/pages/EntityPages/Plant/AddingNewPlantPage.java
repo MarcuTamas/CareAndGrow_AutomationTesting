@@ -5,7 +5,10 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class AddingNewPlantPage extends PageObject {
-/**** WebElements ****/
+    /**** WebElements ****/
+    @FindBy(tagName = "h3")
+    private WebElementFacade pageTitle;
+
     @FindBy(id = "searchToAddButton")
     private WebElementFacade searchToAddButton;
 
@@ -25,18 +28,22 @@ public class AddingNewPlantPage extends PageObject {
         this.foundedPlantButton = find("//button[contains(text(), '" + plantName + "')]");
     }
 
-    @FindBy(id = "noFoundedPlantsMessage")
-    private WebElementFacade noFoundedPlantsMessage;
+    @FindBy(xpath = "/html/body/main/app-root/main/app-plant-add/div[2]/div/div/div[1]/button")
+    private WebElementFacade closeSearchToAddModalButton;
 
-    @FindBy(id = "plant-botanicalName")
-    private WebElementFacade plantBotanicalNameForm;
+
+    @FindBy(id = "plant-commonName")
+    private WebElementFacade plantCommonNameForm;
 
     @FindBy(id = "addPlantButton")
     private WebElementFacade addPlantButton;
 
 
+    /**** Actions on WebElements ****/
+    public String get_PageTitle() {
+        return this.pageTitle.getText();
+    }
 
-/**** Actions on WebElements ****/
     public void click_searchToAddButton() {
         this.searchToAddButton.click();
     }
@@ -49,52 +56,38 @@ public class AddingNewPlantPage extends PageObject {
         this.searchToAddQueryButton.click();
     }
 
-    public void click_selectFoundedPlantsList() {
-        this.selectFoundedPlantsListButton.click();
+    public void click_closeModal() {
+        this.closeSearchToAddModalButton.click();
     }
+
+    public void click_selectFoundedPlantsList() {
+        //We have to wait for the button to be enabled before clicking it
+        //If it is present only if there are any founded plants
+        this.selectFoundedPlantsListButton.waitUntilEnabled().click();
+    }
+
     public void click_foundedPlantButton(String plantName) {
         set_FoundedPlantButton(plantName);
         this.foundedPlantButton.click();
-
-//        System.out.println("Query word: " + plantName);
-        System.out.println(foundedPlantButton.getText());
-//        if (this.foundedPlantButton.getText().contains(queryWord)) {
-//            System.out.println(this.foundedPlantButton.getText());
-//            this.foundedPlantButton.click();
-//        }
-//        this.foundedPlantButton.click();
     }
 
     public void click_addPlantButton() {
         this.addPlantButton.click();
     }
 
-/**** Check methods ****/
-    //Check if any founded plant button contains the query word
-//    public boolean check_ifAnyFoundedPlantButtonContainsQueryWord(String queryWord) {
-//        System.out.println(foundedPlantButton.getText());
-//        return foundedPlantButton.getText().contains(queryWord);
-//    }
+    /**** Check methods ****/
+    //Check if any founded plant button it is set correctly with the query word
+    public boolean check_ifFoundedPlantButtonIsCorrectlySetToQueryWord(String plantName) {
+        return this.foundedPlantButton.getTextContent().contains(plantName);
+    }
 
     //Can be used to check if the plant fields are prepared to be added
-    public String get_plantBotanicalNameForm() {
-        return this.plantBotanicalNameForm.getText();
+    public String get_plantCommonNameForm() {
+        return this.plantCommonNameForm.getValue();
     }
 
     //Check if no plants were found by given query word
-    public boolean check_selectFoundedPlantsListButton() {
-        return this.selectFoundedPlantsListButton.isDisplayed();
-    }
-
-    public boolean check_noFoundedPlantsMessageIsPresent() {
-        if (this.noFoundedPlantsMessage.isDisplayed() &&
-                this.noFoundedPlantsMessage.getText().contains("No plants with given query word were found in the API.")) {
-            return true;
-        }
-        return false;
-    }
-
-    public void wait_for_selectFoundedPlantsListButton() {
-        this.selectFoundedPlantsListButton.waitUntilPresent();
+    public boolean check_selectFoundedPlantsListButtonIsPresent() {
+        return this.selectFoundedPlantsListButton.isPresent();
     }
 }
