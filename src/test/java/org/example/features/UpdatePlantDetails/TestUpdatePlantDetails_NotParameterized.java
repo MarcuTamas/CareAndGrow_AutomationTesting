@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
 public class TestUpdatePlantDetails_NotParameterized {
-    @Managed(uniqueSession = true, driver = "chrome")
+    @Managed(uniqueSession = false, driver = "chrome")
     public WebDriver webdriver;
 
     @Steps
@@ -25,6 +25,13 @@ public class TestUpdatePlantDetails_NotParameterized {
         this.endUserUpdatePlantDetailsSteps.goto_home_page_and_then_to_update_plant_details_page("724");
         this.endUserUpdatePlantDetailsSteps.update_plant_details("CommonName", "BotanicalName", "Watering", "Sunlight", "Propagation", "Yes", "CareLevel", "GrowthRate", "Family", "09-02-2023", "1");
         this.endUserUpdatePlantDetailsSteps.check_the_log("PlantDetailUpdateComponent: updated CommonName");
+    }
+
+    @Issue("#Invalid_UpdatePlantDetailsSteps")
+    @Test
+    public void invalid_Update_Plant_Details() {
+        this.endUserUpdatePlantDetailsSteps.goto_home_page_and_then_to_update_plant_details_page("724");
+        this.endUserUpdatePlantDetailsSteps.update_plant_details("CommonName", "BotanicalName", "Watering", "Sunlight", "Propagation", "Yes", "CareLevel", "GrowthRate", "Family", "09-02-2023", "0");
     }
 
 

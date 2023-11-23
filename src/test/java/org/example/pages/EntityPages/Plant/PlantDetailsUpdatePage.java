@@ -107,4 +107,8 @@ public class PlantDetailsUpdatePage extends PageObject {
     public void click_updatePlantPageButton() {
         this.updatePlantPageButton.click();
     }
+
+    public Boolean check_UpdatePlantPageButton_isDisabled() {
+        return this.updatePlantPageButton.isDisabled();
+    }
 }

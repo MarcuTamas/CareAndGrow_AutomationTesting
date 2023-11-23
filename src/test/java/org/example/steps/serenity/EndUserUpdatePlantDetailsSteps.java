@@ -9,6 +9,7 @@ import org.example.pages.NavBar.NavBarElementPage;
 import org.example.pages.WelcomePage;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class EndUserUpdatePlantDetailsSteps {
     WelcomePage welcomePage;
@@ -32,7 +33,7 @@ public class EndUserUpdatePlantDetailsSteps {
      * Update plant steps check if the page title is changed to the new plant common name
      */
     @Step
-    //Update plant steps | ACT & ASSERT
+    //Update plant valid steps | ACT & ASSERT
     public void update_plant_details(String plantCommonName, String plantBotanicalName, String plantWatering, String plantSunlight, String plantPropagation, String plantFlowers, String plantCareLevel, String plantGrowthRate, String plantFamily, String plantDate, String plantAmount) {
         type_plantCommonName(plantCommonName);
         type_plantBotanicalName(plantBotanicalName);
@@ -45,7 +46,13 @@ public class EndUserUpdatePlantDetailsSteps {
         type_plantFamily(plantFamily);
         type_plantDate(plantDate);
         type_plantAmount(plantAmount);
-        click_updatePlantPageButton(plantCommonName); //Here is made the assertion
+
+        if (Integer.parseInt(plantAmount) <= 0) {
+            invalid_update_plant_details(); //Here is made the assertion
+        } else {
+            click_updatePlantPageButton(plantCommonName); //Here is made the assertion
+        }
+
     }
 
     @Step
@@ -56,10 +63,16 @@ public class EndUserUpdatePlantDetailsSteps {
     }
 
 
-
+    @Step
+    //Update plant invalid steps | ACT & ASSERT
+    public void invalid_update_plant_details() {
+//        System.out.println(this.plantDetailsUpdatePage.check_UpdatePlantPageButton_isDisabled());
+        assertTrue(this.plantDetailsUpdatePage.check_UpdatePlantPageButton_isDisabled());
+    }
 
 //======================================================================================================================
-/**** Steps ****/
+
+    /**** Steps ****/
 //======================================================================================================================
     //Initial steps | ACT & ASSERT
     @Step
@@ -160,4 +173,6 @@ public class EndUserUpdatePlantDetailsSteps {
     public void check_the_logMessage(String expectedLogMessage) {
         assertEquals(this.logPreviewPage.get_lastLogMessage(), expectedLogMessage); //Assert
     }
+
+
 }

@@ -1,16 +1,23 @@
 package org.example.features.UpdatePlantDetails;
 
+import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Issue;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.junit.annotations.UseTestDataFrom;
 import org.example.steps.serenity.EndUserUpdatePlantDetailsSteps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-@RunWith(SerenityRunner.class)
+@RunWith(SerenityParameterizedRunner.class)
+@UseTestDataFrom("src/test/resources/features/UpdatePlantDetails/PlantUpdateData.csv")
 public class TestUpdatePlantDetails_Parameterized {
+
+    //TODO: REMEBER THAT in the CSV we do not need this time to add quotes around the data (we have tried it was included in the data).
+    private String plantId, plantCommonName, plantBotanicalName, plantWatering, plantSunlight, plantPropagation, plantFlowers, plantCareLevel, plantGrowthRate, plantFamily, plantDate, plantAmount, expectedLogMessage;
+
     @Managed(uniqueSession = true, driver = "chrome")
     public WebDriver webdriver;
 
@@ -19,12 +26,17 @@ public class TestUpdatePlantDetails_Parameterized {
 
 
 /**** Test Scenarios ****/
-    @Issue("#Valid_UpdatePlantDetailsSteps")
+    @Issue("#Parameterized_UpdatePlantDetailsSteps")
     @Test
-    public void valid_Update_Plant_Details() {
-        this.endUserUpdatePlantDetailsSteps.goto_home_page_and_then_to_update_plant_details_page("724");
-        this.endUserUpdatePlantDetailsSteps.update_plant_details("CommonName", "BotanicalName", "Watering", "Sunlight", "Propagation", "Yes", "CareLevel", "GrowthRate", "Family", "09-02-2023", "1");
-        this.endUserUpdatePlantDetailsSteps.check_the_log("PlantDetailUpdateComponent: updated CommonName");
+    public void parameterized_Update_Plant_Details() {
+        this.endUserUpdatePlantDetailsSteps.goto_home_page_and_then_to_update_plant_details_page(plantId);
+        this.endUserUpdatePlantDetailsSteps.update_plant_details(plantCommonName, plantBotanicalName, plantWatering, plantSunlight, plantPropagation, plantFlowers, plantCareLevel, plantGrowthRate, plantFamily, plantDate, plantAmount);
+
+        //We check the log only if the amount is greater than 0 because if it is 0 then the update is not valid and the log is not created
+            //The third test has the amount set to 0 so the log is not created
+        if (Integer.parseInt(plantAmount) > 0) {
+            this.endUserUpdatePlantDetailsSteps.check_the_log(expectedLogMessage);
+        }
     }
 
 
