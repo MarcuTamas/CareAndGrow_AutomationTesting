@@ -9,8 +9,11 @@ public class MyPlantsNavBarSubMenuPage extends PageObject {
     @FindBy(id = "PlantsInLocalStorageNumber")
     private WebElementFacade plantsInLocalStorageNumber;
 
-    @FindBy(id = "AddPlantButton")
+    @FindBy(name = "AddPlantButton")
     private WebElementFacade addPlantButton;
+
+    @FindBy(name = "UpdatePlantButton")
+    private WebElementFacade updatePlantButton;
 
 /**** Actions on WebElements ****/
     public String get_plantsInLocalStorageNumber() {
@@ -19,5 +22,9 @@ public class MyPlantsNavBarSubMenuPage extends PageObject {
 
     public void click_addPlantButton() {
         this.addPlantButton.click();
+    }
+
+    public void click_updatePlantButton() {
+        this.updatePlantButton.click();
     }
 }

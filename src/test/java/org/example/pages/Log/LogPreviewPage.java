@@ -13,6 +13,9 @@ public class LogPreviewPage extends PageObject {
     @FindBy(name = "logMessages")
     private List<WebElementFacade> logMessages;
 
+    @FindBy(xpath = "/html/body/main/app-root/main/app-navigation-bar/div[1]/div/div/div[1]/button")
+    private WebElementFacade closeButton;
+
 /**** Actions on WebElements ****/
 
     public List<String> get_logMessages() {
@@ -26,6 +29,10 @@ public class LogPreviewPage extends PageObject {
 
     public String get_lastLogMessage() {
         return this.logMessages.get(logMessages.size() - 1).getText();
+    }
+
+    public void click_closeButton() {
+        this.closeButton.click();
     }
 
 }

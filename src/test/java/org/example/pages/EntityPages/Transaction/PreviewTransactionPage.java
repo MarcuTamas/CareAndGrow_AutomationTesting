@@ -6,7 +6,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 
 public class PreviewTransactionPage extends PageObject {
-/*** WebElements ***/
+/**** WebElements ****/
     @FindBy(id = "CloseModalButton")
     private WebElementFacade closeModalButton;
 

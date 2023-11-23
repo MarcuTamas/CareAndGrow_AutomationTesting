@@ -34,6 +34,11 @@ public class AddingNewPlantCarePage extends PageObject {
     private WebElementFacade addPlantCarePageButton;
 
 /**** Actions on WebElements ****/
+    public String get_pageTitle() {
+        return this.pageTitle.getText();
+    }
+
+
     public void type_plantCareId(String plantCareId) {
         this.plantCareIdForm.type(plantCareId);
     }
@@ -63,7 +68,4 @@ public class AddingNewPlantCarePage extends PageObject {
         this.addPlantCarePageButton.click();
     }
 
-    public String get_pageTitle() {
-        return this.pageTitle.getText();
-    }
 }
