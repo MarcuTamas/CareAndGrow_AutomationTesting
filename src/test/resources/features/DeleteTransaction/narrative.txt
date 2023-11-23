@@ -1,4 +1,5 @@
-Search for definitions
-In order to understand a word that I don't know
-As a user
-I want to be able to look up the meaning of the word
+Delete Transaction
+The user can delete an existing transaction by clicking on the delete Transaction button.
+The user will be asked to confirm the deletion.
+If the user confirms the deletion, the transaction will be deleted from the local storage.
+If the user cancels the deletion, the user will be redirected to the Welcome Page.

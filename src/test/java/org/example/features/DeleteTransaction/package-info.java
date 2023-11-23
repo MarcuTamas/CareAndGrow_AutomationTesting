@@ -1,13 +1,11 @@
 
 @Narrative(
-        title = "Accept Privacy Policy should initialize with valid MockObjects",
-        text = {"In order to be able to use the app the user has to accept the privacy policy",
-                "The user should be able to accept the privacy policy and initialize the app with mock objects",
+        title = "Delete Transaction",
+        text = {"The user should be able to delete a transaction existing in the local storage",
                 "",
-                "✅ The valid test will check the local storage for existing the initialized objects",
-                "❌ The invalid test will check the local storage for not existing any initialized objects"
+                "✅ The valid test will delete a transaction existing in the local storage and check the log message",
         },
-        cardNumber = "#123"
+        cardNumber = "#3"
 )
 package org.example.features.DeleteTransaction;
 

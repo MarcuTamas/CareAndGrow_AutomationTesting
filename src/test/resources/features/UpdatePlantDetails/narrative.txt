@@ -1,4 +1,3 @@
-Search for definitions
-In order to understand a word that I don't know
-As a user
-I want to be able to look up the meaning of the word
+Plant Update
+The user can update a Plant existing in the local storage.
+They cannot change the Plant Id and cannot set the Amount to 0.

@@ -1,9 +1,11 @@
 
 @Narrative(
-        title = "Search for Plant in Perenual API",
-        text = {"In order to add a Plant in local storage the user can opt to search for it in Perenual API.",
-                "The search should return a list of Plants that match the search criteria.",
-                "I want to be able to look up the meaning of unusual and impressive words"},
+        title = "Update plant details",
+        text = {"The user should be able to update the details of a plant existing in the local storage",
+                "",
+                "✅ The valid test will update the details of a plant existing in the local storage and check the log message",
+                "❌ The invalid test will try to set the plant field Amount to 0 and check the Update Button to be disabled",
+        },
         cardNumber = "#1234"
 )
 package org.example.features.UpdatePlantDetails;
