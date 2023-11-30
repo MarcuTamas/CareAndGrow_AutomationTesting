@@ -1,0 +1,5 @@
+Search to add
+The user can search for a plant by it's name, and the search will return a list of plants that match the search term.
+The search is not case sensitive.
+After the search is complete, the user can click on the plant name to add it to their local storage plant list.
+If the search term is not found, the user will be notified that no results were found.

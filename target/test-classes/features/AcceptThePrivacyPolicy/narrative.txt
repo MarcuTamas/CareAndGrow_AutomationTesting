@@ -1,0 +1,4 @@
+Accept Privacy Policy
+The user must be able to accept the privacy policy in order to use the Web App.
+The method `acceptPrivacyPolicy` is called when the user clicks on the button "Accept Privacy Policy" in the `PrivacyPolicy` component. This method sets the `privacyPolicyAccepted` property to `true` and saves it in the local storage.
+It will populate the local storage with valid MockObjects.

@@ -1,0 +1,6 @@
+plantId, plantCommonName, plantBotanicalName, plantWatering, plantSunlight, plantPropagation, plantFlowers, plantCareLevel, plantGrowthRate, plantFamily, plantDate, plantAmount, expectedLogMessage
+540, Basil, Ocimum basilicum, Regular, Full Sun, Seeds, Yes, Easy, Fast, Lamiaceae, 04-03-2021, 1, PlantDetailUpdateComponent: updated Basil
+1301, Peace Lily, Spathiphyllum, Moderate, Low Light, Division, Yes, Easy, Moderate, Araceae, 11-11-2011, 7, PlantDetailUpdateComponent: updated Peace Lily
+1301, Peace Lily, Spathiphyllum, Moderate, Low Light, Division, Yes, Easy, Moderate, Araceae, 11-11-2011, 0, PlantDetailUpdateComponent: updated Peace Lily
+1470, Hoya Carnosa, Hoya Carnosa, Regular, Bright Indirect Light, Offsets, Yes, Easy, Slow, Asclepiadaceae, 27-09-1996, 3, PlantDetailUpdateComponent: updated Hoya Carnosa
+391,Rose, Rosa, Moderate, Full Sun, Cuttings, Yes, Moderate, Moderate, Rosaceae, 03-07-1993, 2, PlantDetailUpdateComponent: updated Rose

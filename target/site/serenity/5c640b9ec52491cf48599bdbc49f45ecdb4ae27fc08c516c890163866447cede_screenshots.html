@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Project using Serenity, Selenium and JUnit</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="112f3bf851a6ed9345e881b65ee927009378da3b6e0ce13b15ecc79852b0eff7.html">Test Update Plant Details Parameterized</a></span>
+                > <span class="truncate-60"><a
+                    href="5c640b9ec52491cf48599bdbc49f45ecdb4ae27fc08c516c890163866447cede.html">Parameterized update plant details </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 30-11-2023 15:27</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Test Update Plant Details Parameterized </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Parameterized update plant details
+                                    <span class="related-issue-title">(#Parameterized_UpdatePlantDetailsSteps)</span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Goto home page and then to update plant details page: &lt;plantId&gt;<br>Update plant details: {{&lt;plantAmount&gt;}}, &lt;plantBotanicalName&gt;, &lt;plantWatering&gt;, &lt;plantSunlight&gt;, &lt;plantPropagation&gt;, &lt;plantFlowers&gt;, &lt;plantCareLevel&gt;, &lt;plantGrowthRate&gt;, &lt;plantFamily&gt;, &lt;plantDate&gt;, &lt;plantAmount&gt;<br>Check the log: PlantDetailUpdateComponent: updated {{&lt;plantAmount&gt;}}</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Parameterized update plant details " width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page and then to update plant details page: 540" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Click plant button" width="1685"/>
+                <img src="a90e5c6ae134c1bb4350fcb7faed3a06a26d9060f8c2cfbb4da6414c17f1254e.png" title=" Click plant button (completed)" width="1685"/>
+                <img src="a90e5c6ae134c1bb4350fcb7faed3a06a26d9060f8c2cfbb4da6414c17f1254e.png" title=" Click update plant nav bar button" width="1685"/>
+                <img src="3fd2dae536f0182122c0e4a1727cf28e2bfb9a3a01fa7aa9767239163df243b4.png" title=" Click update plant nav bar button (completed)" width="1685"/>
+                <img src="3fd2dae536f0182122c0e4a1727cf28e2bfb9a3a01fa7aa9767239163df243b4.png" title=" Select plant to update: 540" width="1685"/>
+                <img src="a71220bbf136fb54d34746f8cfbc1ef42f4803b88929cefa9a83afdbe0c370af.png" title=" Select plant to update: 540 (completed)" width="1685"/>
+                <img src="a71220bbf136fb54d34746f8cfbc1ef42f4803b88929cefa9a83afdbe0c370af.png" title=" Goto home page and then to update plant details page: 540 (completed)" width="1685"/>
+                <img src="a569845b5c7243bcd59e6edd74f92e1e2203119011f307dc2b44181f62a77746.png" title=" Update plant details: Basil, Ocimum basilicum, Regular, Full Sun, Seeds, Yes, Easy, Fast, Lamiaceae, 04-03-2021, 1" width="1685"/>
+                <img src="a569845b5c7243bcd59e6edd74f92e1e2203119011f307dc2b44181f62a77746.png" title=" Type plant common name: Basil" width="1685"/>
+                <img src="a569845b5c7243bcd59e6edd74f92e1e2203119011f307dc2b44181f62a77746.png" title=" Type plant botanical name: Ocimum basilicum" width="1685"/>
+                <img src="e72a0a30707c15eb4adb2c15a8939fee9563f87dbe3b79ade25da0c3f99f8abe.png" title=" Type plant botanical name: Ocimum basilicum (completed)" width="1685"/>
+                <img src="e72a0a30707c15eb4adb2c15a8939fee9563f87dbe3b79ade25da0c3f99f8abe.png" title=" Type plant watering: Regular" width="1685"/>
+                <img src="98ce072143eaca991860cfa305ab1798204adf57ea23cfc2f9fd8f293e5f2965.png" title=" Type plant watering: Regular (completed)" width="1685"/>
+                <img src="98ce072143eaca991860cfa305ab1798204adf57ea23cfc2f9fd8f293e5f2965.png" title=" Type plant sunlight: Full Sun" width="1685"/>
+                <img src="4f7e43bde74de230e4941eccf777b399b67e42e1f5b69f0323610770bbcf1639.png" title=" Type plant sunlight: Full Sun (completed)" width="1685"/>
+                <img src="4f7e43bde74de230e4941eccf777b399b67e42e1f5b69f0323610770bbcf1639.png" title=" Type plant propagation: Seeds" width="1685"/>
+                <img src="ede0994101b585a7fde991ab8333eca36c15695724a139e6f5ad67d6d6318370.png" title=" Type plant propagation: Seeds (completed)" width="1685"/>
+                <img src="ede0994101b585a7fde991ab8333eca36c15695724a139e6f5ad67d6d6318370.png" title=" Select plant flowers: Yes" width="1685"/>
+                <img src="c7d4fb4bebce429f46f25a99ba706baff40faaa781a5eb442f9300f9894a9f65.png" title=" Select plant flowers: Yes (completed)" width="1685"/>
+                <img src="c7d4fb4bebce429f46f25a99ba706baff40faaa781a5eb442f9300f9894a9f65.png" title=" Type plant care level: Easy" width="1685"/>
+                <img src="fa0492a42737f88ed1892c65ee86c76942f003339b7fc29b27d86931099e4e21.png" title=" Type plant care level: Easy (completed)" width="1685"/>
+                <img src="fa0492a42737f88ed1892c65ee86c76942f003339b7fc29b27d86931099e4e21.png" title=" Type plant growth rate: Fast" width="1685"/>
+                <img src="c8f8ffd02d266530f647b3b60e268544c417cc14979f4cc603301c88c9f4bb30.png" title=" Type plant growth rate: Fast (completed)" width="1685"/>
+                <img src="c8f8ffd02d266530f647b3b60e268544c417cc14979f4cc603301c88c9f4bb30.png" title=" Type plant family: Lamiaceae" width="1685"/>
+                <img src="a9b6812a4cc84ec19e2a293370cf68de6c51dc28f99dd012c1ff3ba74628713e.png" title=" Type plant family: Lamiaceae (completed)" width="1685"/>
+                <img src="a9b6812a4cc84ec19e2a293370cf68de6c51dc28f99dd012c1ff3ba74628713e.png" title=" Type plant date: 04-03-2021" width="1685"/>
+                <img src="1bf2c28373448233b3a490c316fde68862695fec866d1d61bf88c149f970711e.png" title=" Type plant date: 04-03-2021 (completed)" width="1685"/>
+                <img src="1bf2c28373448233b3a490c316fde68862695fec866d1d61bf88c149f970711e.png" title=" Type plant amount: 1" width="1685"/>
+                <img src="dae889cb3364a34326fc813dbfb7044e75e60b7fe75f93fa221b6c05e4ff5ff1.png" title=" Type plant amount: 1 (completed)" width="1685"/>
+                <img src="dae889cb3364a34326fc813dbfb7044e75e60b7fe75f93fa221b6c05e4ff5ff1.png" title=" Click update plant page button: Basil" width="1685"/>
+                <img src="fdac61d97fbaf4a2c901bbde80df4639eb42a441c3cb04d6cd6c351170e48593.png" title=" Click update plant page button: Basil (completed)" width="1685"/>
+                <img src="fdac61d97fbaf4a2c901bbde80df4639eb42a441c3cb04d6cd6c351170e48593.png" title=" Update plant details: Basil, Ocimum basilicum, Regular, Full Sun, Seeds, Yes, Easy, Fast, Lamiaceae, 04-03-2021, 1 (completed)" width="1685"/>
+                <img src="42f505ea7f813dba87b89a026f96aeeafa477a44d06111ec6744cb3f4085f103.png" title=" Check the log: PlantDetailUpdateComponent: updated Basil" width="1685"/>
+                <img src="42f505ea7f813dba87b89a026f96aeeafa477a44d06111ec6744cb3f4085f103.png" title=" Click log preview nav bar button" width="1685"/>
+                <img src="42f505ea7f813dba87b89a026f96aeeafa477a44d06111ec6744cb3f4085f103.png" title=" Check the log message: PlantDetailUpdateComponent: updated Basil" width="1685"/>
+                <img src="5ef87532f10c15b3963115383f6c02a397c00b3d686093c266e17e76dcad6162.png" title=" Check the log message: PlantDetailUpdateComponent: updated Basil (completed)" width="1685"/>
+                <img src="5ef87532f10c15b3963115383f6c02a397c00b3d686093c266e17e76dcad6162.png" title=" Check the log: PlantDetailUpdateComponent: updated Basil (completed)" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Parameterized update plant details " width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page and then to update plant details page: 1301" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Click plant button" width="1685"/>
+                <img src="5d3a1a5eede6f263527a2b1854e73dfda35da6efee16afa24016bd5dd4d52355.png" title=" Click plant button (completed)" width="1685"/>
+                <img src="5d3a1a5eede6f263527a2b1854e73dfda35da6efee16afa24016bd5dd4d52355.png" title=" Click update plant nav bar button" width="1685"/>
+                <img src="5c60ce9f40e5a982069a1dc4d919a91b3885dc164ba074282ea26f953580789e.png" title=" Click update plant nav bar button (completed)" width="1685"/>
+                <img src="5c60ce9f40e5a982069a1dc4d919a91b3885dc164ba074282ea26f953580789e.png" title=" Select plant to update: 1301" width="1685"/>
+                <img src="62a577790c4e75bf8ded4253acae2b85bb872295f6a1f01d6f1a439b4a6a3db4.png" title=" Select plant to update: 1301 (completed)" width="1685"/>
+                <img src="62a577790c4e75bf8ded4253acae2b85bb872295f6a1f01d6f1a439b4a6a3db4.png" title=" Goto home page and then to update plant details page: 1301 (completed)" width="1685"/>
+                <img src="27f81a56d2fc1df69a37bba13fd00f623c33a2ae9ce6c37c59613f8ae41a9a98.png" title=" Update plant details: Peace Lily, Spathiphyllum, Moderate, Low Light, Division, Yes, Easy, Moderate, Araceae, 11-11-2011, 7" width="1685"/>
+                <img src="27f81a56d2fc1df69a37bba13fd00f623c33a2ae9ce6c37c59613f8ae41a9a98.png" title=" Type plant common name: Peace Lily" width="1685"/>
+                <img src="27f81a56d2fc1df69a37bba13fd00f623c33a2ae9ce6c37c59613f8ae41a9a98.png" title=" Type plant botanical name: Spathiphyllum" width="1685"/>
+                <img src="48f5b800ad163eb3b2aca8ffa09932880b6e418a781262b18b6c23aafa056a9a.png" title=" Type plant botanical name: Spathiphyllum (completed)" width="1685"/>
+                <img src="48f5b800ad163eb3b2aca8ffa09932880b6e418a781262b18b6c23aafa056a9a.png" title=" Type plant watering: Moderate" width="1685"/>
+                <img src="4c580d61e56596cd76c7206a1a26ac1a7ae128673592b1027823871ee0412afd.png" title=" Type plant watering: Moderate (completed)" width="1685"/>
+                <img src="4c580d61e56596cd76c7206a1a26ac1a7ae128673592b1027823871ee0412afd.png" title=" Type plant sunlight: Low Light" width="1685"/>
+                <img src="5070c75176837e021ce76dbccebda5dab82b9eb5c318f23ffa70dd453d833dcb.png" title=" Type plant sunlight: Low Light (completed)" width="1685"/>
+                <img src="5070c75176837e021ce76dbccebda5dab82b9eb5c318f23ffa70dd453d833dcb.png" title=" Type plant propagation: Division" width="1685"/>
+                <img src="32236ea28ba42507dd29ec6e7b0469bc95e8a342a78170b23f5658446f311d7b.png" title=" Type plant propagation: Division (completed)" width="1685"/>
+                <img src="32236ea28ba42507dd29ec6e7b0469bc95e8a342a78170b23f5658446f311d7b.png" title=" Select plant flowers: Yes" width="1685"/>
+                <img src="32295dc9e085733593695ac2ac165e5447b6045b5a1a78df4461367e3e879da9.png" title=" Select plant flowers: Yes (completed)" width="1685"/>
+                <img src="32295dc9e085733593695ac2ac165e5447b6045b5a1a78df4461367e3e879da9.png" title=" Type plant care level: Easy" width="1685"/>
+                <img src="4ac01bc6e06b371a492dedf553a258d5ac9c94c4063e4ad245a982dab98a807c.png" title=" Type plant care level: Easy (completed)" width="1685"/>
+                <img src="4ac01bc6e06b371a492dedf553a258d5ac9c94c4063e4ad245a982dab98a807c.png" title=" Type plant growth rate: Moderate" width="1685"/>
+                <img src="fa8c94ac9ee8c37471ebc9b133a4da7271391ca285dd289e0fddb664c392ac6b.png" title=" Type plant growth rate: Moderate (completed)" width="1685"/>
+                <img src="fa8c94ac9ee8c37471ebc9b133a4da7271391ca285dd289e0fddb664c392ac6b.png" title=" Type plant family: Araceae" width="1685"/>
+                <img src="5b714222539d1424a866750fc509a1fa67878b2799dfc4f3a4256746526ccdda.png" title=" Type plant family: Araceae (completed)" width="1685"/>
+                <img src="5b714222539d1424a866750fc509a1fa67878b2799dfc4f3a4256746526ccdda.png" title=" Type plant date: 11-11-2011" width="1685"/>
+                <img src="da4e6f76b5b43fa8686538fe05a33b1b8891a0c0020e661bb92c6e9bcda3f42c.png" title=" Type plant date: 11-11-2011 (completed)" width="1685"/>
+                <img src="da4e6f76b5b43fa8686538fe05a33b1b8891a0c0020e661bb92c6e9bcda3f42c.png" title=" Type plant amount: 7" width="1685"/>
+                <img src="06f60b4eb945f965afb573bebfb17a5b1603b5d15db53770f5f11c58e11729fe.png" title=" Type plant amount: 7 (completed)" width="1685"/>
+                <img src="06f60b4eb945f965afb573bebfb17a5b1603b5d15db53770f5f11c58e11729fe.png" title=" Click update plant page button: Peace Lily" width="1685"/>
+                <img src="936791a42d43a96c0bffbb7476d46418288fb379b2326e11f2d85b2483d33ab9.png" title=" Click update plant page button: Peace Lily (completed)" width="1685"/>
+                <img src="936791a42d43a96c0bffbb7476d46418288fb379b2326e11f2d85b2483d33ab9.png" title=" Update plant details: Peace Lily, Spathiphyllum, Moderate, Low Light, Division, Yes, Easy, Moderate, Araceae, 11-11-2011, 7 (completed)" width="1685"/>
+                <img src="bd6b16efdc6a01d864755b517557a450ce21ed78a696f35af487ee764ab7fb45.png" title=" Check the log: PlantDetailUpdateComponent: updated Peace Lily" width="1685"/>
+                <img src="bd6b16efdc6a01d864755b517557a450ce21ed78a696f35af487ee764ab7fb45.png" title=" Click log preview nav bar button" width="1685"/>
+                <img src="bd6b16efdc6a01d864755b517557a450ce21ed78a696f35af487ee764ab7fb45.png" title=" Check the log message: PlantDetailUpdateComponent: updated Peace Lily" width="1685"/>
+                <img src="70ee52cc87eea28c59e870e1a663b0bb2c8b17bddb0e83683d836c3e997fc775.png" title=" Check the log message: PlantDetailUpdateComponent: updated Peace Lily (completed)" width="1685"/>
+                <img src="70ee52cc87eea28c59e870e1a663b0bb2c8b17bddb0e83683d836c3e997fc775.png" title=" Check the log: PlantDetailUpdateComponent: updated Peace Lily (completed)" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Parameterized update plant details " width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page and then to update plant details page: 1301" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Click plant button" width="1685"/>
+                <img src="88005f5506bbad10112db8045e05a2912eb38489ce9a58674f93e0186514c6db.png" title=" Click plant button (completed)" width="1685"/>
+                <img src="88005f5506bbad10112db8045e05a2912eb38489ce9a58674f93e0186514c6db.png" title=" Click update plant nav bar button" width="1685"/>
+                <img src="a953beaea158f6a18fc2952211ccdc47c13d6fa8389e7c27e25777e1d9d2657e.png" title=" Click update plant nav bar button (completed)" width="1685"/>
+                <img src="a953beaea158f6a18fc2952211ccdc47c13d6fa8389e7c27e25777e1d9d2657e.png" title=" Select plant to update: 1301" width="1685"/>
+                <img src="d3e1e7ceb5b118379bf83bc0869e30aa4df1efd939c2ce8f926728a03fabc701.png" title=" Select plant to update: 1301 (completed)" width="1685"/>
+                <img src="d3e1e7ceb5b118379bf83bc0869e30aa4df1efd939c2ce8f926728a03fabc701.png" title=" Goto home page and then to update plant details page: 1301 (completed)" width="1685"/>
+                <img src="37155f9aaa3e8ded48038944282d6ba0f9c6be99188aac291dfe94c5ade9054b.png" title=" Update plant details: Peace Lily, Spathiphyllum, Moderate, Low Light, Division, Yes, Easy, Moderate, Araceae, 11-11-2011, 0" width="1685"/>
+                <img src="37155f9aaa3e8ded48038944282d6ba0f9c6be99188aac291dfe94c5ade9054b.png" title=" Type plant common name: Peace Lily" width="1685"/>
+                <img src="37155f9aaa3e8ded48038944282d6ba0f9c6be99188aac291dfe94c5ade9054b.png" title=" Type plant botanical name: Spathiphyllum" width="1685"/>
+                <img src="6ea263d3b569383752fee6a28a1e9b6fc6048d73e6769ddebcdac3deddc97876.png" title=" Type plant botanical name: Spathiphyllum (completed)" width="1685"/>
+                <img src="6ea263d3b569383752fee6a28a1e9b6fc6048d73e6769ddebcdac3deddc97876.png" title=" Type plant watering: Moderate" width="1685"/>
+                <img src="4e6f206d6dbd322c68827fdd12f07257580a80dfb03bc4e7fbbebd743061fb7d.png" title=" Type plant watering: Moderate (completed)" width="1685"/>
+                <img src="4e6f206d6dbd322c68827fdd12f07257580a80dfb03bc4e7fbbebd743061fb7d.png" title=" Type plant sunlight: Low Light" width="1685"/>
+                <img src="8e98703cc71ff47813bdf6eb3a0d0a8ed23620201e77b46688ea129afd8aa984.png" title=" Type plant sunlight: Low Light (completed)" width="1685"/>
+                <img src="8e98703cc71ff47813bdf6eb3a0d0a8ed23620201e77b46688ea129afd8aa984.png" title=" Type plant propagation: Division" width="1685"/>
+                <img src="596790b83d8ba3a05a4f13790609ab5c67e8d2fb571a7af02365d21a48d28b26.png" title=" Type plant propagation: Division (completed)" width="1685"/>
+                <img src="596790b83d8ba3a05a4f13790609ab5c67e8d2fb571a7af02365d21a48d28b26.png" title=" Select plant flowers: Yes" width="1685"/>
+                <img src="32295dc9e085733593695ac2ac165e5447b6045b5a1a78df4461367e3e879da9.png" title=" Select plant flowers: Yes (completed)" width="1685"/>
+                <img src="32295dc9e085733593695ac2ac165e5447b6045b5a1a78df4461367e3e879da9.png" title=" Type plant care level: Easy" width="1685"/>
+                <img src="b26d7da1ae4b345d9714e66feaff1cab83684baf1498a9b4d2535b5ff97d4ecf.png" title=" Type plant care level: Easy (completed)" width="1685"/>
+                <img src="b26d7da1ae4b345d9714e66feaff1cab83684baf1498a9b4d2535b5ff97d4ecf.png" title=" Type plant growth rate: Moderate" width="1685"/>
+                <img src="66fd86e716289270731f38465d929e073186be12a0957e9dac3e88bb563a6cc6.png" title=" Type plant growth rate: Moderate (completed)" width="1685"/>
+                <img src="66fd86e716289270731f38465d929e073186be12a0957e9dac3e88bb563a6cc6.png" title=" Type plant family: Araceae" width="1685"/>
+                <img src="6acde64f706b0e742022049077a99a904f0c664f895ba04e0767e17d42f2197c.png" title=" Type plant family: Araceae (completed)" width="1685"/>
+                <img src="6acde64f706b0e742022049077a99a904f0c664f895ba04e0767e17d42f2197c.png" title=" Type plant date: 11-11-2011" width="1685"/>
+                <img src="9c8308b813a2a77afd0d8048df3366260d2e5e61a5becd2d6ce12f7b289d08e7.png" title=" Type plant date: 11-11-2011 (completed)" width="1685"/>
+                <img src="9c8308b813a2a77afd0d8048df3366260d2e5e61a5becd2d6ce12f7b289d08e7.png" title=" Type plant amount: 0" width="1685"/>
+                <img src="1adbe336111e8941cb4d342f1a678e547b573bd1ec5c668bc02e43f8d451b0bb.png" title=" Type plant amount: 0 (completed)" width="1685"/>
+                <img src="1adbe336111e8941cb4d342f1a678e547b573bd1ec5c668bc02e43f8d451b0bb.png" title=" Invalid update plant details" width="1685"/>
+                <img src="1adbe336111e8941cb4d342f1a678e547b573bd1ec5c668bc02e43f8d451b0bb.png" title=" Invalid update plant details (completed)" width="1685"/>
+                <img src="1adbe336111e8941cb4d342f1a678e547b573bd1ec5c668bc02e43f8d451b0bb.png" title=" Update plant details: Peace Lily, Spathiphyllum, Moderate, Low Light, Division, Yes, Easy, Moderate, Araceae, 11-11-2011, 0 (completed)" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Parameterized update plant details " width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page and then to update plant details page: 1470" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Click plant button" width="1685"/>
+                <img src="2f532094216737f924a161db2ec7c667ef238bf49c5819bd844297a01ec52bbd.png" title=" Click plant button (completed)" width="1685"/>
+                <img src="2f532094216737f924a161db2ec7c667ef238bf49c5819bd844297a01ec52bbd.png" title=" Click update plant nav bar button" width="1685"/>
+                <img src="0e00079eb71397aca4bfaea28deb01f5e8ad9bb040832b49eb09be1f00db2b26.png" title=" Click update plant nav bar button (completed)" width="1685"/>
+                <img src="0e00079eb71397aca4bfaea28deb01f5e8ad9bb040832b49eb09be1f00db2b26.png" title=" Select plant to update: 1470" width="1685"/>
+                <img src="8e76699707793c6747d3f1476d30cde6e27cc7da14e5a66303f2cc442d6f374f.png" title=" Select plant to update: 1470 (completed)" width="1685"/>
+                <img src="8e76699707793c6747d3f1476d30cde6e27cc7da14e5a66303f2cc442d6f374f.png" title=" Goto home page and then to update plant details page: 1470 (completed)" width="1685"/>
+                <img src="8d316b27187d8676fe8cfbbac6494e20cc1a7529c57a38d3aa73eee53f641f20.png" title=" Update plant details: Hoya Carnosa, Hoya Carnosa, Regular, Bright Indirect Light, Offsets, Yes, Easy, Slow, Asclepiadaceae, 27-09-1996, 3" width="1685"/>
+                <img src="8d316b27187d8676fe8cfbbac6494e20cc1a7529c57a38d3aa73eee53f641f20.png" title=" Type plant common name: Hoya Carnosa" width="1685"/>
+                <img src="8d316b27187d8676fe8cfbbac6494e20cc1a7529c57a38d3aa73eee53f641f20.png" title=" Type plant botanical name: Hoya Carnosa" width="1685"/>
+                <img src="b1a3ca3a7761eca935b57779b62255f82349349fe24ed4ec83d321a8d22f91a4.png" title=" Type plant botanical name: Hoya Carnosa (completed)" width="1685"/>
+                <img src="b1a3ca3a7761eca935b57779b62255f82349349fe24ed4ec83d321a8d22f91a4.png" title=" Type plant watering: Regular" width="1685"/>
+                <img src="5a5dbc9d5291f42d54bba5adfc2a9d59ca3cf23ef67e1805a35f448b614545a8.png" title=" Type plant watering: Regular (completed)" width="1685"/>
+                <img src="5a5dbc9d5291f42d54bba5adfc2a9d59ca3cf23ef67e1805a35f448b614545a8.png" title=" Type plant sunlight: Bright Indirect Light" width="1685"/>
+                <img src="d87a1ab6abe35d78d2b4486ea04f659f7dec960e0003d85d9beb904b50c981f0.png" title=" Type plant sunlight: Bright Indirect Light (completed)" width="1685"/>
+                <img src="d87a1ab6abe35d78d2b4486ea04f659f7dec960e0003d85d9beb904b50c981f0.png" title=" Type plant propagation: Offsets" width="1685"/>
+                <img src="202ff5d4086ff7dd9dd09a29564d35f685a837f7ab19d856e2420b9b9bb7919d.png" title=" Type plant propagation: Offsets (completed)" width="1685"/>
+                <img src="202ff5d4086ff7dd9dd09a29564d35f685a837f7ab19d856e2420b9b9bb7919d.png" title=" Select plant flowers: Yes" width="1685"/>
+                <img src="c438a6163f18a3770c4fbb80e75f8d31eb5c3b9874153fa9befdf348274823e0.png" title=" Select plant flowers: Yes (completed)" width="1685"/>
+                <img src="c438a6163f18a3770c4fbb80e75f8d31eb5c3b9874153fa9befdf348274823e0.png" title=" Type plant care level: Easy" width="1685"/>
+                <img src="7b33b8fd897ca001a5691ff2720d1eeaba83f0ec9c1179bbdaced0cdd64f58ef.png" title=" Type plant care level: Easy (completed)" width="1685"/>
+                <img src="7b33b8fd897ca001a5691ff2720d1eeaba83f0ec9c1179bbdaced0cdd64f58ef.png" title=" Type plant growth rate: Slow" width="1685"/>
+                <img src="d70e57e61f99ec3a246df9360f7f87ae94ce1a7041ced5e182bab2442e9481d5.png" title=" Type plant growth rate: Slow (completed)" width="1685"/>
+                <img src="d70e57e61f99ec3a246df9360f7f87ae94ce1a7041ced5e182bab2442e9481d5.png" title=" Type plant family: Asclepiadaceae" width="1685"/>
+                <img src="159056c382d05f1f6416df397ea300f51b68e0289655a1096552fc0c840b7728.png" title=" Type plant family: Asclepiadaceae (completed)" width="1685"/>
+                <img src="159056c382d05f1f6416df397ea300f51b68e0289655a1096552fc0c840b7728.png" title=" Type plant date: 27-09-1996" width="1685"/>
+                <img src="3a7303fb335f789fb19de198e06d3f6386fc952853d392b572f677fc1af78a15.png" title=" Type plant date: 27-09-1996 (completed)" width="1685"/>
+                <img src="3a7303fb335f789fb19de198e06d3f6386fc952853d392b572f677fc1af78a15.png" title=" Type plant amount: 3" width="1685"/>
+                <img src="faad417961c0ceaabb95ad47d3e6e8ccd76895ca6230dd115bbb8048e634629c.png" title=" Type plant amount: 3 (completed)" width="1685"/>
+                <img src="faad417961c0ceaabb95ad47d3e6e8ccd76895ca6230dd115bbb8048e634629c.png" title=" Click update plant page button: Hoya Carnosa" width="1685"/>
+                <img src="0393f7193beda9aaea0008898ba5371f2a2e85f1676bebf911b6e4dc6f978684.png" title=" Click update plant page button: Hoya Carnosa (completed)" width="1685"/>
+                <img src="0393f7193beda9aaea0008898ba5371f2a2e85f1676bebf911b6e4dc6f978684.png" title=" Update plant details: Hoya Carnosa, Hoya Carnosa, Regular, Bright Indirect Light, Offsets, Yes, Easy, Slow, Asclepiadaceae, 27-09-1996, 3 (completed)" width="1685"/>
+                <img src="5b0d374043beecf8377e3242fade2f5a90e3cc788b8a45616b0d866cbe519fd2.png" title=" Check the log: PlantDetailUpdateComponent: updated Hoya Carnosa" width="1685"/>
+                <img src="5b0d374043beecf8377e3242fade2f5a90e3cc788b8a45616b0d866cbe519fd2.png" title=" Click log preview nav bar button" width="1685"/>
+                <img src="5b0d374043beecf8377e3242fade2f5a90e3cc788b8a45616b0d866cbe519fd2.png" title=" Check the log message: PlantDetailUpdateComponent: updated Hoya Carnosa" width="1685"/>
+                <img src="bffe021aa720a07aa019efb0a85dc20ccb25e3fe4d5c8f59ea48007f03b10850.png" title=" Check the log message: PlantDetailUpdateComponent: updated Hoya Carnosa (completed)" width="1685"/>
+                <img src="bffe021aa720a07aa019efb0a85dc20ccb25e3fe4d5c8f59ea48007f03b10850.png" title=" Check the log: PlantDetailUpdateComponent: updated Hoya Carnosa (completed)" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Parameterized update plant details " width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page and then to update plant details page: 391" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Goto home page" width="1685"/>
+                <img src="09b4dc3f9259e7565280b5133fccbf62007e08e8b341721b060d893c8c7e51de.png" title=" Click plant button" width="1685"/>
+                <img src="b97f309631c4b6517627bfe920d1488d8952ba8f2ed1b10d8f03ff82d43d19b9.png" title=" Click plant button (completed)" width="1685"/>
+                <img src="b97f309631c4b6517627bfe920d1488d8952ba8f2ed1b10d8f03ff82d43d19b9.png" title=" Click update plant nav bar button" width="1685"/>
+                <img src="46e7c0ef9ee26c0f848e286c9ab523d906f278820f624d01dc6120bf38d46c5a.png" title=" Click update plant nav bar button (completed)" width="1685"/>
+                <img src="46e7c0ef9ee26c0f848e286c9ab523d906f278820f624d01dc6120bf38d46c5a.png" title=" Select plant to update: 391" width="1685"/>
+                <img src="85346a0e57604d6abb327928161154f01c66864e21d2e3624ed4e4e62bbc3ca5.png" title=" Select plant to update: 391 (completed)" width="1685"/>
+                <img src="85346a0e57604d6abb327928161154f01c66864e21d2e3624ed4e4e62bbc3ca5.png" title=" Goto home page and then to update plant details page: 391 (completed)" width="1685"/>
+                <img src="837b7177a13c9ada4fa5952eecfe93621d950d0a42746b8d1844dde1e6c36673.png" title=" Update plant details: Rose, Rosa, Moderate, Full Sun, Cuttings, Yes, Moderate, Moderate, Rosaceae, 03-07-1993, 2" width="1685"/>
+                <img src="837b7177a13c9ada4fa5952eecfe93621d950d0a42746b8d1844dde1e6c36673.png" title=" Type plant common name: Rose" width="1685"/>
+                <img src="837b7177a13c9ada4fa5952eecfe93621d950d0a42746b8d1844dde1e6c36673.png" title=" Type plant botanical name: Rosa" width="1685"/>
+                <img src="db21f6f32029ee7046cbaf151082970fee13474e5902760a9b2bab3955e4630e.png" title=" Type plant botanical name: Rosa (completed)" width="1685"/>
+                <img src="db21f6f32029ee7046cbaf151082970fee13474e5902760a9b2bab3955e4630e.png" title=" Type plant watering: Moderate" width="1685"/>
+                <img src="e0ef67ad384abf482dda6fc7649bcb6fb9998f6dfc35e6023a1d0447553e7ebe.png" title=" Type plant watering: Moderate (completed)" width="1685"/>
+                <img src="e0ef67ad384abf482dda6fc7649bcb6fb9998f6dfc35e6023a1d0447553e7ebe.png" title=" Type plant sunlight: Full Sun" width="1685"/>
+                <img src="6f44024adb2202915a4b4ceea4211f737c7d1875f0b933046b5b5a459e6f0286.png" title=" Type plant sunlight: Full Sun (completed)" width="1685"/>
+                <img src="6f44024adb2202915a4b4ceea4211f737c7d1875f0b933046b5b5a459e6f0286.png" title=" Type plant propagation: Cuttings" width="1685"/>
+                <img src="5463f8920b87a718813c9d20fb6415d56175d3840a406903488c02047febe81c.png" title=" Type plant propagation: Cuttings (completed)" width="1685"/>
+                <img src="5463f8920b87a718813c9d20fb6415d56175d3840a406903488c02047febe81c.png" title=" Select plant flowers: Yes" width="1685"/>
+                <img src="c95c74047a5b611a37c57e8bd80a1a0996d19e17be0107ab6e3cfa1282d9cef0.png" title=" Select plant flowers: Yes (completed)" width="1685"/>
+                <img src="c95c74047a5b611a37c57e8bd80a1a0996d19e17be0107ab6e3cfa1282d9cef0.png" title=" Type plant care level: Moderate" width="1685"/>
+                <img src="f7076a2d110685abac3dbe9b105f2b466e0ed3a190d20fe9c61704876bf491c0.png" title=" Type plant care level: Moderate (completed)" width="1685"/>
+                <img src="f7076a2d110685abac3dbe9b105f2b466e0ed3a190d20fe9c61704876bf491c0.png" title=" Type plant growth rate: Moderate" width="1685"/>
+                <img src="d5fadcda015769d4692a6e2c93d9aa011bb6cf935f18f2a6a245a8996768d330.png" title=" Type plant growth rate: Moderate (completed)" width="1685"/>
+                <img src="d5fadcda015769d4692a6e2c93d9aa011bb6cf935f18f2a6a245a8996768d330.png" title=" Type plant family: Rosaceae" width="1685"/>
+                <img src="68fbd6ece713f66f757ea2927582f28b51ea2ba06619efd3cd105c09f78a02f2.png" title=" Type plant family: Rosaceae (completed)" width="1685"/>
+                <img src="68fbd6ece713f66f757ea2927582f28b51ea2ba06619efd3cd105c09f78a02f2.png" title=" Type plant date: 03-07-1993" width="1685"/>
+                <img src="0bdf613878f01a5b160cd6b8ad22e56bdd1c8bff1ed1e824686f015589f2f1e1.png" title=" Type plant date: 03-07-1993 (completed)" width="1685"/>
+                <img src="0bdf613878f01a5b160cd6b8ad22e56bdd1c8bff1ed1e824686f015589f2f1e1.png" title=" Type plant amount: 2" width="1685"/>
+                <img src="6fb8049adf163f4d9add2a7cf30b7dde946574dc9136389fa8d19eba67284172.png" title=" Type plant amount: 2 (completed)" width="1685"/>
+                <img src="6fb8049adf163f4d9add2a7cf30b7dde946574dc9136389fa8d19eba67284172.png" title=" Click update plant page button: Rose" width="1685"/>
+                <img src="a559c5a335b84586792c4f1cd54aacf165b3af062b3733ce5d698927339f8523.png" title=" Click update plant page button: Rose (completed)" width="1685"/>
+                <img src="a559c5a335b84586792c4f1cd54aacf165b3af062b3733ce5d698927339f8523.png" title=" Update plant details: Rose, Rosa, Moderate, Full Sun, Cuttings, Yes, Moderate, Moderate, Rosaceae, 03-07-1993, 2 (completed)" width="1685"/>
+                <img src="e8411f5ba04740e7ccf74d25e86bb4eee3879f6bdbca70d5c75c240d0904ba17.png" title=" Check the log: PlantDetailUpdateComponent: updated Rose" width="1685"/>
+                <img src="e8411f5ba04740e7ccf74d25e86bb4eee3879f6bdbca70d5c75c240d0904ba17.png" title=" Click log preview nav bar button" width="1685"/>
+                <img src="e8411f5ba04740e7ccf74d25e86bb4eee3879f6bdbca70d5c75c240d0904ba17.png" title=" Check the log message: PlantDetailUpdateComponent: updated Rose" width="1685"/>
+                <img src="7550a130d504def0c092f98f9b206c548836a6b6c594bc1da083fec1395a8def.png" title=" Check the log message: PlantDetailUpdateComponent: updated Rose (completed)" width="1685"/>
+                <img src="7550a130d504def0c092f98f9b206c548836a6b6c594bc1da083fec1395a8def.png" title=" Check the log: PlantDetailUpdateComponent: updated Rose (completed): <span class='success-color'>SUCCESS</span>" width="1685"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.3.2</span>
+</div>
+</body>
+</html>

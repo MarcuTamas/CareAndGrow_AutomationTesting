@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Test update plant details not parameterized","Invalid update plant details","SUCCESS","2023-11-30T15:26:38.830076+02:00[Europe/Bucharest]","0.0","8.5"
+"Test update plant details not parameterized","Valid update plant details","SUCCESS","2023-11-30T15:26:47.4462641+02:00[Europe/Bucharest]","0.0","9.59"
+"Test update plant details parameterized","Parameterized update plant details","SUCCESS","2023-11-30T15:27:50.1051145+02:00[Europe/Bucharest]","0.0","50.91"
