@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Test add plant care","Valid add plant care","SUCCESS","2023-11-30T15:25:31.369927+02:00[Europe/Bucharest]","0.0","12.43"
-"Test add plant care","Invalid add plant care","SUCCESS","2023-11-30T15:25:43.8434552+02:00[Europe/Bucharest]","0.0","5.66"

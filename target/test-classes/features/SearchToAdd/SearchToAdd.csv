@@ -1,4 +1,0 @@
-queryWord, plantName, expectedLogMessage
-Prayer, prayer plant, PlantAddComponent: added prayer plant
-Olive, Arbequina European Olive, PlantAddComponent: error adding Arbequina European Olive
-asdasdasd,empty, PlantService: fetched 0 plants in rest API.

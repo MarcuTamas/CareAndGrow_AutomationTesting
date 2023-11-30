@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Test accept privacy policy","Invalid accept privacy policy should not initialize the app with mock objects","SUCCESS","2023-11-30T15:25:14.2119196+02:00[Europe/Bucharest]","0.0","6.79"
-"Test accept privacy policy","Valid accept privacy policy should initialize the app with mock objects","SUCCESS","2023-11-30T15:25:22.2404958+02:00[Europe/Bucharest]","0.0","5.85"
