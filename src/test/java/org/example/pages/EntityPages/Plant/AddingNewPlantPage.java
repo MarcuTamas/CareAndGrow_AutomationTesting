@@ -83,7 +83,7 @@ public class AddingNewPlantPage extends PageObject {
 
     //Can be used to check if the plant fields are prepared to be added
     public String get_plantCommonNameForm() {
-        return this.plantCommonNameForm.getValue();
+        return this.plantCommonNameForm.getTextValue();
     }
 
     //Check if no plants were found by given query word
