@@ -57,7 +57,7 @@ The project involves automating tests for the CareAndGrow WebApp using an automa
       - Testing for invalid update plant details, because the amount field cannot be 0.
       - Testing for valid update plant details.
 
-## 📄 How to Run the Tests
+## 📄 How To Run the Tests
 
 To run the tests, make sure you have all the dependencies installed and follow the steps outlined in the documentation for each tool used. 
 Also, ensure that Java 11 is used for the project.
