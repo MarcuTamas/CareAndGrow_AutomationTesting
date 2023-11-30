@@ -1,4 +1,4 @@
-# CareAndGrow personal developed WebApp Automation Testing
+# CareAndGrow Personal Developed WebApp Automation Testing
 
 ## Description
 
