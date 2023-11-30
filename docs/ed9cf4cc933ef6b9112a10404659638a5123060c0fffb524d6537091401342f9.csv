@@ -1,5 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Test search to add plant not parameterized","Search to add plant","SUCCESS","2023-11-30T15:25:55.8671151+02:00[Europe/Bucharest]","0.0","7.23"
-"Test search to add plant not parameterized","Invalid search to add plant because plant id already exist","SUCCESS","2023-11-30T15:26:03.1467783+02:00[Europe/Bucharest]","0.0","5.16"
-"Test search to add plant not parameterized","Invalid search to add plant not found","SUCCESS","2023-11-30T15:26:08.3568628+02:00[Europe/Bucharest]","0.0","3.95"
-"Test search to add parameterized","Parameterized search to add plant","SUCCESS","2023-11-30T15:26:38.0066986+02:00[Europe/Bucharest]","0.0","24.31"

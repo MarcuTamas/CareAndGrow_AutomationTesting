@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="org.example.features.DeleteTransaction.TestDeleteTransaction" skipped="0" tests="1" time="5.05" timestamp="2023-11-30 03:25:50"><testcase classname="org.example.features.DeleteTransaction.TestDeleteTransaction" name="Valid delete transaction"/></testsuite>
