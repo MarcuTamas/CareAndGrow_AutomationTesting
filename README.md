@@ -1,4 +1,4 @@
-# Project Name: CareAndGrow Automation Testing
+# CareAndGrow personal developed WebApp Automation Testing
 
 ## Description
 
@@ -6,18 +6,19 @@ This repository contains my Automated Testing project undertaken as part of the 
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Serenity BDD report page](https://marcutamas.github.io/CareAndGrow_AutomationTesting/index.html)
-- [Tools Used](#tools-used)
-- [Automated Tested Functionalities](#automated-tested-functionalities)
-- [How to Run the Tests](#how-to-run-the-tests)
-- [License](#license)
+- [💡Overview](#overview)
+- [👀 Serenity BDD report page](https://marcutamas.github.io/CareAndGrow_AutomationTesting/index.html)
+- [💜 CareAndGrow WebApp](https://marcutamas.github.io/CareAndGrow/welcome)
+- [🛠️ Tools Used](#tools-used)
+- [⚙️ Automated Tested Functionalities](#automated-tested-functionalities)
+- [📄 How to Run the Tests](#how-to-run-the-tests)
+- [©️ License](#license)
 
-## Overview
+## 💡 Overview
 
 The project involves automating tests for the CareAndGrow WebApp using an automation tool. I used SerenityBDD with Selenium and Junit to automate the test for some app functionalities, including valid and/or invalid test cases, as well as parameterized testing.
 
-## Tools Used
+## 🛠️ Tools Used
 
 - [Maven](https://maven.apache.org/)
 - [Serenity BDD JUnit Archetype project](https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit-archetype)
@@ -27,7 +28,7 @@ The project involves automating tests for the CareAndGrow WebApp using an automa
 - [geckodriver](https://github.com/mozilla/geckodriver/releases)
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 
-## Automated Tested Functionalities
+## ⚙️ Automated Tested Functionalities
 
 1. **Accept The Privacy Policy**
    - Testing for invalid accept privacy policy should not initialize the app with mock objects.
@@ -56,11 +57,11 @@ The project involves automating tests for the CareAndGrow WebApp using an automa
       - Testing for invalid update plant details, because the amount field cannot be 0.
       - Testing for valid update plant details.
 
-## How to Run the Tests
+## 📄 How to Run the Tests
 
 To run the tests, make sure you have all the dependencies installed and follow the steps outlined in the documentation for each tool used. 
 Also, ensure that Java 11 is used for the project.
 
-## License
+## ©️ License
 
 This project is licensed under the [MIT License](LICENSE).
