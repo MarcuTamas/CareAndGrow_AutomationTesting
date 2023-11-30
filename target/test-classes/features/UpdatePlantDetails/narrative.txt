@@ -1,3 +1,0 @@
-Plant Update
-The user can update a Plant existing in the local storage.
-They cannot change the Plant Id and cannot set the Amount to 0.
